@@ -1,0 +1,403 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Buy a Product",
+    "line": 1,
+    "id": "buy-a-product",
+    "tags": [],
+    "uri": "features/buy-a-product.feature",
+    "elements": [
+      {
+        "id": "buy-a-product;to-verify-if-a-user-is-able-purchase-a-product",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "To verify if a User is able Purchase a Product",
+        "tags": [
+          {
+            "name": "@tc2",
+            "line": 2
+          },
+          {
+            "name": "@all",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "build/cucumber.conf.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5354000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Automation Practice Website's Home page",
+            "match": {
+              "location": "build/step-definitions/mainPageStepDef.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6745000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click on the 'Sign In' Button",
+            "match": {
+              "location": "build/step-definitions/mainPageStepDef.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3627000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I enter valid \"ralph@outlook.com\" and \"ralph123\"",
+            "match": {
+              "location": "build/step-definitions/mainPageStepDef.js:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2429000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on 'Women' and select 'Summer Dresses'",
+            "match": {
+              "location": "build/step-definitions/myAccountPageStepDef.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1816000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I move to 'Printed Summer Dress' and select 'Quick view'",
+            "match": {
+              "location": "build/step-definitions/myAccountPageStepDef.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 510000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I select 's' size and add to cart",
+            "match": {
+              "location": "build/step-definitions/myAccountPageStepDef.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3010000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on Proceed to checkout",
+            "match": {
+              "location": "build/step-definitions/myAccountPageStepDef.js:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3591000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on Proceed to checkout on Summary Tab",
+            "match": {
+              "location": "build/step-definitions/orderSummaryPageStepDef.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1563000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on Proceed to checkout on Address Tab",
+            "match": {
+              "location": "build/step-definitions/orderSummaryPageStepDef.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1235000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I agree to the terms and conditions",
+            "match": {
+              "location": "build/step-definitions/orderSummaryPageStepDef.js:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 350000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click on Proceed to checkout on Shipping Tab",
+            "match": {
+              "location": "build/step-definitions/orderSummaryPageStepDef.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2017000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "The item to be purchased appears on the Payment tab",
+            "match": {
+              "location": "build/step-definitions/orderSummaryPageStepDef.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3204000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "build/cucumber.conf.js:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "User Registration",
+    "line": 1,
+    "id": "user-registration",
+    "tags": [],
+    "uri": "features/register-new-user.feature",
+    "elements": [
+      {
+        "id": "user-registration;to-verify-new-user-registration",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "To verify new user registration",
+        "tags": [
+          {
+            "name": "@tc1",
+            "line": 2
+          },
+          {
+            "name": "@all",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "build/cucumber.conf.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5342000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Automation Practice Website's Home page",
+            "match": {
+              "location": "build/step-definitions/mainPageStepDef.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6303000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click on the 'Sign In' Button",
+            "match": {
+              "location": "build/step-definitions/mainPageStepDef.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2978000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I enter valid email id",
+            "match": {
+              "location": "build/step-definitions/mainPageStepDef.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1103000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on the 'Create Account' Button",
+            "match": {
+              "location": "build/step-definitions/mainPageStepDef.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 205000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Details",
+                      "Values"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "First Name",
+                      "Jane"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Last Name",
+                      "Smith"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Password",
+                      "jane123"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Address",
+                      "Denver"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "City",
+                      "Denver"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "State",
+                      "Oklahoma"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Zip",
+                      "90210"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Mobile Phone",
+                      "604 555 5555"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Address Alias",
+                      "DESC"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I register with valid values on the User Registration Page",
+            "match": {
+              "location": "build/step-definitions/userRegistrationPageStepDef.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 348000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "The user is created",
+            "match": {
+              "location": "build/step-definitions/myAccountPageStepDef.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53523000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "build/cucumber.conf.js:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
