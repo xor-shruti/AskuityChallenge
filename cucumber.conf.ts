@@ -20,7 +20,7 @@ function getScreenshots() {
 setDefaultTimeout(60000);
 
 BeforeAll(async () => {
-            await startWebDriver({env:process.env.NIGHTWATCH_ENV || 'chrome'});
+await startWebDriver({env:process.env.NIGHTWATCH_ENV || 'chrome'});
 });
 
 Before(async () => {

@@ -8,17 +8,16 @@ module.exports = {
     src_folders : ["build"],
     page_objects_path: ["build/page-objects"],
     selenium: {
-       start_process: true, 
-       start_session : true,
-        host: '127.0.0.1', 
-        port: 4444,
-        server_path: seleniumServer.path,
-        cli_args: {
+      cli_args: {
         'webdriver.chrome.driver': chromeDriver.path,
         'webdriver.gecko.driver': geckoDriver.path
       },
-        log_path: 'test_results',
-        default_path_prefix: '/wd/hub'
+      log_path: 'test_results',
+      port: 4445,
+      server_path: seleniumServer.path,
+      start_process: true,
+      check_process_delay: 5000,
+      default_path_prefix: '/wd/hub'
     },
     test_workers: {
         enabled: true,
@@ -26,17 +25,6 @@ module.exports = {
       },
     test_settings: {
         default : {
-            selenium: { 
-                start_process: true, 
-                silent: true,
-                host: '127.0.0.1', 
-                port: 4445,
-                server_path: seleniumServer.path,
-                cli_args: {
-                 'webdriver.chrome.driver': chromeDriver.path,
-                 'webdriver.gecko.driver': geckoDriver.path
-               }
-            },
             screenshots : {
                 enabled : true,
                 on_failure : true,
@@ -47,13 +35,14 @@ module.exports = {
             desiredCapabilities: {
             acceptSslCerts: true,
             browserName: 'chrome',
+            javascriptEnabled: true,
             chromeOptions: {
+            w3c: false,
             args: [
                 'ignore-certificate-errors',
                 'window-size=2560,1440',
-        ]
-           },
-            javascriptEnabled: true
+            ]
+           }
         },
         detailed_output: false,
         live_output: true,
@@ -61,18 +50,20 @@ module.exports = {
         firefox: {
             desiredCapabilities: {
             acceptSslCerts: true,
+            acceptInsecureCerts: true,
             browserName: 'firefox',
             javascriptEnabled: true,
             marionette: true,
             firefoxOptions: {
                 args: [
                     'ignore-certificate-errors',
-                    'window-size=2560,1440',]
+                    'window-size=2560,1440',
+                  ]
                }
-        },
-        detailed_output: false,
-        live_output: true,
-        },
-        skip_testcases_on_fail: false,
-    }  
-}  
+        }
+      },
+      detailed_output: false,
+      live_output: true,
+      },
+      skip_testcases_on_fail: false,
+}    

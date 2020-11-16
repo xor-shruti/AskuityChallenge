@@ -5,7 +5,7 @@ Feature: Buy a Product
         When I click on the 'Sign In' Button
         And I enter valid "<username>" and "<password>"
         And I click on 'Women' and select 'Summer Dresses'
-        And I move to 'Printed Summer Dress' and select 'Quick view'
+        And I move to 'Printed Summer Dress' and select Quick view
         And I select 's' size and add to cart
         And I click on Proceed to checkout
         And I click on Proceed to checkout on Summary Tab

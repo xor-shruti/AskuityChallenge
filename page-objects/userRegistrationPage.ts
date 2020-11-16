@@ -7,15 +7,14 @@ const commands = {
     // Method to fill user registration form
     async fillUserRegistrationForm(browser: NightwatchBrowser, field: string, value: string){
         let fieldLocator: string = camelCase(field);
-        if(fieldLocator == 'state'){
+        if(fieldLocator === 'state'){
         await browser
-        .moveToElement(userRegistrationPage.elements.state,10,10)
         .click(userRegistrationPage.elements.state)
-        .setValue(userRegistrationPage.elements.state, value)
+        .setValue(userRegistrationPage.elements.state, value);
         } else {
         await browser.page.userRegistrationPage()
         .waitForElementPresent(userRegistrationPage.elements[fieldLocator], 5000)
-         .clearValue(userRegistrationPage.elements[fieldLocator])
+        .clearValue(userRegistrationPage.elements[fieldLocator])
         .setValue(userRegistrationPage.elements[fieldLocator], value);
         }
         await browser.page.mainPage()

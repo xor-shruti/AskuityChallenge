@@ -12,12 +12,20 @@ const commands = {
     async clickOnLink(browser: NightwatchBrowser, firstElement: string, secondElement: string) {
         let xpathOfFirstElement: string = `//a[text()='${firstElement}']`;
         let xpathOfSecondElement: string = `//a[text()='${secondElement}']`;
-        await browser.useXpath().moveToElement(xpathOfFirstElement,10,10,()=>{
-            browser.useXpath().click(xpathOfSecondElement).useCss();
+        await browser.useXpath().moveToElement(xpathOfFirstElement,10,10, ()=>{
+            browser
+            .waitForElementVisible(xpathOfSecondElement, 2000)
+            .click(xpathOfSecondElement).useCss();
         });
     },
-    async selectDress(browser: NightwatchBrowser, firstElement: string, secondElement: string){
-        await browser.useXpath().moveToElement(myAccountPage.elements.printedDress,10,10).mouseButtonClick('left').useCss();
+    async selectDress(browser: NightwatchBrowser, dress: string){
+        let selectedDress: string = `//img[@alt = '${dress}']`;
+        await browser.elements('xpath', selectedDress, (elements) => {
+        let element = null;
+        element = elements.value[0].ELEMENT;
+        browser.moveTo(element).mouseButtonClick('left');
+        });
+
     },
     async selectSizeAndAddToCart(browser: NightwatchBrowser, option: string){
         await browser
@@ -35,7 +43,7 @@ const commands = {
         await browser.page.myAccountPage()
         .useCss()
         .waitForElementVisible(myAccountPage.elements.proceedToCheckOut, 3000)
-        .moveToElement(myAccountPage.elements.proceedToCheckOut,0,0)
+        .moveToElement(myAccountPage.elements.proceedToCheckOut,10,10)
         .click(myAccountPage.elements.proceedToCheckOut);
     }
 };
@@ -56,7 +64,7 @@ export interface myAccountPageObject {
 
 const myAccountPage: myAccountPageObject = {
     elements: {
-        userName: '.account span',    
+        userName:  '.account span',    
         signOutButton: '.logout',
         summerDressesLink: "//a[text()='Summer Dresses']",
         successfullAccountCreation: "/p[@class = 'info-account']",

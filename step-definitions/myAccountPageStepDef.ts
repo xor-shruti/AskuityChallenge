@@ -5,8 +5,8 @@ When(/^I click on '([^']*)' and select '([^']*)'$/, async (firstElement: string,
   await client.page.myAccountPage().clickOnLink(client, firstElement, secondElement);
 });
 
-When(/^I move to '([^']*)' and select '([^']*)'$/, async (firstElement: string, secondElement: string) => {
-  await client.page.myAccountPage().selectDress(client, firstElement, secondElement);
+When(/^I move to '([^']*)' and select Quick view$/, async (dress: string) => {
+  await client.page.myAccountPage().selectDress(client, dress);
 });
 
 When(/^I select '([^']*)' size and add to cart$/, async (value: string) => {

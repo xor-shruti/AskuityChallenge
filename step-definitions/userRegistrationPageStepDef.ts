@@ -1,6 +1,6 @@
 import { When, TableDefinition } from 'cucumber';
 import { client } from 'nightwatch-api';
-var _ = require('lodash');
+import {_} from 'lodash';
 
 When(/^I register with valid values on the User Registration Page$/, 
 async (table: TableDefinition) => {
