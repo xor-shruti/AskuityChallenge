@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  nightwatch:
+    build: .
+    container_name: nightwatch
+    
+
+
+
+
+
+      

@@ -4,3 +4,4 @@ tests_output
 screenshots
 build/
 *.log
+report
